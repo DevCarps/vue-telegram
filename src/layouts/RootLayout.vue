@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-// Remove the import for 'next/font/google'
+
 
 export default defineComponent({
   name: 'RootLayout',
