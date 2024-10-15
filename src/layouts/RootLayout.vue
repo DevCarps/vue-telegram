@@ -1,24 +1,30 @@
 <template>
-  <div :class="interClass">
-    <!-- Your layout content goes here -->
-    <slot></slot> <!-- Allows for content to be passed to this layout -->
-  </div>
+  <RootLayout>
+    <router-view />
+  </RootLayout>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-
+import { defineComponent, onMounted } from 'vue';
+import RootLayout from './layouts/RootLayout.vue';
 
 export default defineComponent({
-  name: 'RootLayout',
-  computed: {
-    interClass() {
-      return ''; // Adjust this logic as needed
-    },
+  name: 'App',
+  components: {
+    RootLayout,
+  },
+  setup() {
+    const tele = window.Telegram.WebApp;
+
+    onMounted(() => {
+      tele.ready();
+    });
   },
 });
 </script>
 
 <style scoped>
-/* Your styles here */
+body {
+  font-family: 'Inter', sans-serif;
+}
 </style>
