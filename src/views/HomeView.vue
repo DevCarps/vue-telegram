@@ -36,15 +36,15 @@ export default defineComponent({
     const userData = ref<UserData | null>(null);
 
     onMounted(() => {
-  console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe); // Log the entire object
+      console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe); // Log the entire object
 
-  if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
-    userData.value = WebApp.initDataUnsafe.user as UserData;
-    console.log("User data:", userData.value); // Log the user data
-  } else {
-    console.warn('User data is not available. Ensure the app is launched from Telegram.');
-  }
-});
+      if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
+        userData.value = WebApp.initDataUnsafe.user as UserData;
+        console.log("User data:", userData.value); // Log the user data
+      } else {
+        console.warn('User data is not available. Ensure the app is launched from Telegram.');
+      }
+    });
 
     return { userData };
   },
@@ -52,5 +52,8 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Add any styles specific to this component here */
+/* Ensure that you have the correct classes */
+.text-white {
+  color: white; /* or use your framework's class */
+}
 </style>
