@@ -7,7 +7,7 @@ const web_link = 'https://vue-telegram-sample.netlify.app/'
 
 bot.start((ctx) => {
   // Send a welcome message with the link to your web app
-  ctx.reply("Welcome!", {reply_markup: {keyboard:[[{text: "Web app", web_app: { url:web_link } }]]}} );
+  ctx.reply("Welcome! Tap the button below to start", {reply_markup: {keyboard:[[{text: "Web app", web_app: { url:web_link } }]]}} );
 });
 
 // Start the bot
