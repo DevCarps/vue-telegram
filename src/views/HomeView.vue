@@ -52,8 +52,5 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/* Ensure that you have the correct classes */
-.text-white {
-  color: white; /* or use your framework's class */
-}
+
 </style>
