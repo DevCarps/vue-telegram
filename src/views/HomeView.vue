@@ -35,6 +35,16 @@ export default defineComponent({
   setup() {
     const userData = ref<UserData | null>(null);
 
+    userData.value = {
+  id: 123,
+  first_name: 'John',
+  last_name: 'Doe',
+  username: 'johndoe',
+  language_code: 'en',
+  is_premium: false,
+};
+
+
     onMounted(() => {
       console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe); // Log the entire object
       if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
