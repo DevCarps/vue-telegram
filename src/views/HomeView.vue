@@ -36,20 +36,16 @@ export default defineComponent({
     const userData = ref<UserData | null>(null);
 
     onMounted(() => {
-  // Log init data
-  console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe);
-  
-  // Use hardcoded data for testing
-  userData.value = {
-    id: 123,
-    first_name: 'John',
-    last_name: 'Doe',
-    username: 'johndoe',
-    language_code: 'en',
-    is_premium: false,
-  };
-  console.log("Hardcoded User data:", userData.value);
+  console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe); // Log the entire object
+
+  if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
+    userData.value = WebApp.initDataUnsafe.user as UserData;
+    console.log("User data:", userData.value); // Log the user data
+  } else {
+    console.warn('User data is not available. Ensure the app is launched from Telegram.');
+  }
 });
+
 
 
     return { userData };
