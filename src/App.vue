@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from 'vue';
-import RootLayout from './layouts/RootLayout.vue';
+import RootLayout from './RootLayout.vue';
 
 // Import your Telegram Web App functionality
 import { useWebApp } from 'vue-tg';
