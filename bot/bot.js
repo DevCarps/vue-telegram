@@ -1,7 +1,7 @@
 const { Telegraf } = require('telegraf');
 
 // Replace 'YOUR_BOT_TOKEN' with the token you got from BotFather
-const bot = new Telegraf('YOUR_BOT_TOKEN');
+const bot = new Telegraf('7623273613:AAFmaxOgiur7E1uM70cuQa08LPqA-9FhVUQ');
 
 bot.start((ctx) => {
   // Automatically send the web app link
