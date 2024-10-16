@@ -45,6 +45,9 @@ export default defineComponent({
         // Inspect initDataUnsafe
       console.log("WebApp Data:", WebApp.initDataUnsafe);
 
+      // Detailed log of the initDataUnsafe structure
+      console.log("WebApp Data Structure:", JSON.stringify(WebApp.initDataUnsafe, null, 2));
+
 
        // Check if user data is available
       if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
