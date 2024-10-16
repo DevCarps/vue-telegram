@@ -36,8 +36,17 @@ export default defineComponent({
     const userData = ref<UserData | null>(null);
 
     onMounted(() => {
-      console.log("WebApp.initDataUnsafe:", WebApp.initDataUnsafe); // Log the entire object
+      // Check if the Telegram SDK is loaded
+      console.log("Telegram SDK:", window.Telegram); // Log the entire object
 
+       // Call WebApp.ready() to initialize the SDK
+       window.Telegram.WebApp.ready();
+
+        // Inspect initDataUnsafe
+      console.log("WebApp Data:", WebApp.initDataUnsafe);
+
+
+       // Check if user data is available
       if (WebApp.initDataUnsafe && WebApp.initDataUnsafe.user) {
         userData.value = WebApp.initDataUnsafe.user as UserData;
         console.log("User data:", userData.value); // Log the user data
