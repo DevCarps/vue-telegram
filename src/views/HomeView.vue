@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white">
+  <div class="text-black">
     <h1>Welcome to Telegram</h1>
     <main class="p-4">
       <div v-if="userData">
