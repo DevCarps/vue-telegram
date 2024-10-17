@@ -3,7 +3,7 @@ const { Telegraf } = require('telegraf');
 // Replace 'YOUR_BOT_TOKEN' with the token you got from BotFather
 const bot = new Telegraf('7623273613:AAFmaxOgiur7E1uM70cuQa08LPqA-9FhVUQ');
 
-const web_link = 'https://vue-telegram-sample.netlify.app/'
+const web_link = 'https://vue-telegram.netlify.app/'
 
 bot.start((ctx) => {
   // Send a welcome message with the link to your web app
