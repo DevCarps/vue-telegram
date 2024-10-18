@@ -14,8 +14,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "vue"
+      
     ],
     "paths": {
       "@/*": [
@@ -36,6 +35,7 @@
     "tests/**/*.ts",
     "tests/**/*.tsx",
     "src/global.d.ts",
+    "nuxt.config.ts"
   ],
   "exclude": [
     "node_modules"

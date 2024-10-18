@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "nuxt build",
     "lint": "vue-cli-service lint",
-    "dev": "nuxt3"
+    "dev": "nuxt",
+    "start": "nuxt start"
   },
   "dependencies": {
     "@twa-dev/sdk": "^7.10.1",
@@ -17,6 +18,7 @@
     "vue-tg": "^0.8.0"
   },
   "devDependencies": {
+    "@nuxt/types": "^2.18.1",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-eslint": "~5.0.0",

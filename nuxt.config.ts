@@ -1,9 +1,9 @@
 import { defineNuxtConfig } from 'nuxt';
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }],
+    app: {
+        head: {
+            script: [{ src: 'https://telegram.org/js/telegram-web-app.js' }],
+        },
     },
-  },
 });
