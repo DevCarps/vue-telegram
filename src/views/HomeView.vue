@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import { MainButton, useWebAppPopup, useWebApp   } from 'vue-tg';
+import { MainButton, useWebAppPopup, useWebApp } from 'vue-tg';
 
-const { showAlert } = useWebAppPopup()
-const { initData, initDataUnsafe } = useWebApp()
-
+const { showAlert } = useWebAppPopup();
+const { initData, initDataUnsafe } = useWebApp();
 </script>
 
 <template>
@@ -11,6 +10,5 @@ const { initData, initDataUnsafe } = useWebApp()
   <pre>{{ initData }}</pre>
   <pre>{{ initDataUnsafe }}</pre>
   <MainButton text="Tap alert" @click="() => showAlert('Taena pano yun')" />
-
 </template>
 

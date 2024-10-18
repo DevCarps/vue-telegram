@@ -1,24 +1,11 @@
 <template>
-  <router-view />
+  <NuxtPage />
+  <ClientOnly>
+    <HomeView />
+  </ClientOnly>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted } from 'vue';
+<script setup lang="ts">
+import HomeView from '/views/HomeView.vue';
 
-export default defineComponent({
-  name: 'App',
-  setup() {
-    const tele = window.Telegram.WebApp;
-
-    onMounted(() => {
-      tele.ready();
-    });
-  },
-});
 </script>
-
-<style scoped>
-body {
-  font-family: 'Inter', sans-serif;
-}
-</style>
