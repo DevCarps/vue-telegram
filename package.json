@@ -5,10 +5,12 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "dev": "nuxt3"
   },
   "dependencies": {
     "@twa-dev/sdk": "^7.10.1",
+    "nuxt": "^3.13.2",
     "telegraf": "^4.16.3",
     "vue": "^3.2.13",
     "vue-router": "^4.4.5",

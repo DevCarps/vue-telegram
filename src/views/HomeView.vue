@@ -2,13 +2,13 @@
 import { MainButton, useWebAppPopup, useWebApp   } from 'vue-tg';
 
 const { showAlert } = useWebAppPopup()
-const { initdata, initDataUnsafe } = useWebApp()
+const { initData, initDataUnsafe } = useWebApp()
 
 </script>
 
 <template>
   <h2>User Data</h2>
-  <pre>{{ initdata }}</pre>
+  <pre>{{ initData }}</pre>
   <pre>{{ initDataUnsafe }}</pre>
   <MainButton text="Tap alert" @click="() => showAlert('Taena pano yun')" />
 
